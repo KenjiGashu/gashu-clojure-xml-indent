@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Orelha author="author" arg="arg">
+    <Cera val="1" val2="2" bur="bu">Cera man</Cera>
+    <Cera val="3" val2="4" bur="b2">Cera man2</Cera>
+    <Cera val="5" val2="6" bur="b3">
+        <MestreCera ui="ui" ai="ai" ei="ei">Mestre</MestreCera>
+    </Cera>
+</Orelha>

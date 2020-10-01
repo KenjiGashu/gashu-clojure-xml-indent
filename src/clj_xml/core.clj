@@ -29,13 +29,31 @@
                         {:tag :address, :attrs {}, :content []}
                         {:tag :state, :attrs {}, :content ["Denial"]}]}]})
 
- 
+(defn compare-element [xml1 xml2]
+  (let [{tag1 :tag} xml1
+        {tag2 :tag} xml2]
+    (println tag1)
+    (println tag2)))
 
+(defn teste []
+  (with-open [r (clojure.java.io/input-stream input)] 
+    (let [oi (xml/parse r)]
+      (println oi)
+      
+      )))
 
 (defn -main [input output]
   (with-open [r (clojure.java.io/input-stream input)] 
     (let [oi (xml/parse r)]
       (println oi)
-      (with-open [w (clojure.java.io/writer output)]
-        (.write w (clj-xml/indent-str oi)))
+      
       )))
+
+
+;; (defn -main [input output]
+;;   (with-open [r (clojure.java.io/input-stream input)] 
+;;     (let [oi (xml/parse r)]
+;;       (println oi)
+;;       (with-open [w (clojure.java.io/writer output)]
+;;         (.write w (clj-xml/indent-str oi)))
+;;       )))
